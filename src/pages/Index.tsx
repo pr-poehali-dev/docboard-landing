@@ -115,70 +115,72 @@ export default function Index() {
         </div>
       </nav>
 
-      <section className="relative py-24 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-purple-50/50 to-blue-50/30"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.15),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
-        <div className="container mx-auto max-w-6xl text-center animate-fade-in relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Документы и доски<br />в одном месте
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Как Notion + Miro, но российский и безопасный.<br />
-            Визуальные доски, таблицы, шаблоны и теги — в облаке или on-premise
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap mb-16">
-            <Button size="lg" className="text-lg px-8">
-              <Icon name="Rocket" size={20} className="mr-2" />
-              Попробовать бесплатно
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8">
-              <Icon name="Calendar" size={20} className="mr-2" />
-              Запросить демо
-            </Button>
-          </div>
-
-          <div className="mt-12 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-t-xl p-3 border border-gray-700">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="flex-1 bg-gray-700/50 rounded px-3 py-1 text-xs text-gray-300 font-mono">
-                  Doc&Board — Главная
-                </div>
+      <section className="relative py-20 px-6 overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-pink-50/30 to-white"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(168,85,247,0.08),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(236,72,153,0.06),transparent_50%)]"></div>
+        
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                Документы и доски в одном месте
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Как Notion + Miro, но российский и безопасный. Визуальные доски, таблицы, шаблоны и теги — в облаке или on-premise
+              </p>
+              <div className="flex gap-4 flex-wrap mb-12">
+                <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+                  <Icon name="Rocket" size={20} className="mr-2" />
+                  Попробовать бесплатно
+                </Button>
+                <Button size="lg" variant="outline" className="text-lg px-8 border-purple-200 text-purple-700 hover:bg-purple-50">
+                  <Icon name="Calendar" size={20} className="mr-2" />
+                  Запросить демо
+                </Button>
               </div>
-              <div className="bg-black rounded-lg overflow-hidden shadow-2xl border border-gray-700">
-                <video 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  className="w-full"
-                >
-                  <source src="https://msafi.ru/hse/preview.mp4" type="video/mp4" />
-                </video>
+
+              <div className="grid grid-cols-3 gap-6">
+                <div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1">15,000+</div>
+                  <div className="text-sm text-gray-600">Активных пользователей</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1">100+</div>
+                  <div className="text-sm text-gray-600">Корпоративных клиентов</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1">99.9%</div>
+                  <div className="text-sm text-gray-600">Uptime SLA</div>
+                </div>
               </div>
             </div>
-            <div className="bg-gradient-to-b from-gray-900 to-gray-800 h-4 rounded-b-xl border-x border-b border-gray-700"></div>
-          </div>
 
-          <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-lg p-8 border shadow-lg">
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">15,000+</div>
-                <div className="text-sm text-muted-foreground">Активных пользователей</div>
+            <div className="lg:pl-8">
+              <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-t-xl p-3 border border-gray-700 shadow-2xl">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <div className="flex-1 bg-gray-700/50 rounded px-3 py-1 text-xs text-gray-300 font-mono">
+                    Doc&Board — Главная
+                  </div>
+                </div>
+                <div className="bg-black rounded-lg overflow-hidden shadow-2xl border border-gray-700">
+                  <video 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    className="w-full"
+                  >
+                    <source src="https://msafi.ru/hse/preview.mp4" type="video/mp4" />
+                  </video>
+                </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">100+</div>
-                <div className="text-sm text-muted-foreground">Корпоративных клиентов</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-1">99.9%</div>
-                <div className="text-sm text-muted-foreground">Uptime SLA</div>
-              </div>
+              <div className="bg-gradient-to-b from-gray-900 to-gray-800 h-4 rounded-b-xl border-x border-b border-gray-700 shadow-xl"></div>
             </div>
           </div>
         </div>
@@ -393,43 +395,51 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gradient-to-br from-primary/10 to-primary/5">
+      <section className="py-20 px-6 bg-gradient-to-br from-purple-50 via-pink-50/30 to-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Icon name="Sparkles" size={16} />
             <span>В разработке</span>
           </div>
           <h2 className="text-3xl font-bold mb-4">AI-ассистент для работы</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Помощь в поиске по базе знаний, анализ документов, структурирование информации и поддержка продуктовых задач
           </p>
           <div className="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
-            <div className="flex items-start gap-3 bg-white/50 p-4 rounded-lg">
-              <Icon name="Search" size={20} className="text-primary flex-shrink-0 mt-1" />
+            <div className="flex items-start gap-3 bg-white p-4 rounded-lg border border-purple-100">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                <Icon name="Search" size={20} className="text-white" />
+              </div>
               <div>
                 <div className="font-semibold mb-1">Умный поиск</div>
-                <div className="text-sm text-muted-foreground">Найдёт нужное даже по описанию контекста</div>
+                <div className="text-sm text-gray-600">Найдёт нужное даже по описанию контекста</div>
               </div>
             </div>
-            <div className="flex items-start gap-3 bg-white/50 p-4 rounded-lg">
-              <Icon name="MessageSquare" size={20} className="text-primary flex-shrink-0 mt-1" />
+            <div className="flex items-start gap-3 bg-white p-4 rounded-lg border border-purple-100">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                <Icon name="MessageSquare" size={20} className="text-white" />
+              </div>
               <div>
                 <div className="font-semibold mb-1">Анализ документов</div>
-                <div className="text-sm text-muted-foreground">Суммаризация, выделение главного</div>
+                <div className="text-sm text-gray-600">Суммаризация, выделение главного</div>
               </div>
             </div>
-            <div className="flex items-start gap-3 bg-white/50 p-4 rounded-lg">
-              <Icon name="Layers" size={20} className="text-primary flex-shrink-0 mt-1" />
+            <div className="flex items-start gap-3 bg-white p-4 rounded-lg border border-purple-100">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                <Icon name="Layers" size={20} className="text-white" />
+              </div>
               <div>
                 <div className="font-semibold mb-1">Структурирование</div>
-                <div className="text-sm text-muted-foreground">Предложения по организации знаний</div>
+                <div className="text-sm text-gray-600">Предложения по организации знаний</div>
               </div>
             </div>
-            <div className="flex items-start gap-3 bg-white/50 p-4 rounded-lg">
-              <Icon name="Lightbulb" size={20} className="text-primary flex-shrink-0 mt-1" />
+            <div className="flex items-start gap-3 bg-white p-4 rounded-lg border border-purple-100">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                <Icon name="Lightbulb" size={20} className="text-white" />
+              </div>
               <div>
                 <div className="font-semibold mb-1">Продуктовые задачи</div>
-                <div className="text-sm text-muted-foreground">Помощь в анализе и планировании</div>
+                <div className="text-sm text-gray-600">Помощь в анализе и планировании</div>
               </div>
             </div>
           </div>
@@ -466,37 +476,37 @@ export default function Index() {
               </ul>
               <Button className="w-full" variant="outline">Начать бесплатно</Button>
             </Card>
-            <Card className="p-8 border-primary border-2 relative">
+            <Card className="p-8 border-2 border-transparent bg-gradient-to-br from-purple-50 to-pink-50 relative shadow-lg">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="bg-primary text-white px-4 py-1 rounded-full text-xs font-semibold">Популярный</span>
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-xs font-semibold">Популярный</span>
               </div>
               <div className="mb-6">
                 <h3 className="text-2xl font-bold mb-2">Команда</h3>
-                <p className="text-muted-foreground text-sm">Для небольших команд</p>
+                <p className="text-gray-600 text-sm">Для небольших команд</p>
               </div>
               <div className="mb-6">
-                <span className="text-4xl font-bold">₽990</span>
-                <span className="text-muted-foreground">/пользователь/мес</span>
+                <span className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">₽990</span>
+                <span className="text-gray-600">/пользователь/мес</span>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" size={20} className="text-primary flex-shrink-0 mt-0.5" />
+                  <Icon name="Check" size={20} className="text-purple-600 flex-shrink-0 mt-0.5" />
                   <span className="text-sm">Неограниченные документы</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" size={20} className="text-primary flex-shrink-0 mt-0.5" />
+                  <Icon name="Check" size={20} className="text-purple-600 flex-shrink-0 mt-0.5" />
                   <span className="text-sm">Совместная работа</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" size={20} className="text-primary flex-shrink-0 mt-0.5" />
+                  <Icon name="Check" size={20} className="text-purple-600 flex-shrink-0 mt-0.5" />
                   <span className="text-sm">История версий</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" size={20} className="text-primary flex-shrink-0 mt-0.5" />
+                  <Icon name="Check" size={20} className="text-purple-600 flex-shrink-0 mt-0.5" />
                   <span className="text-sm">Приоритетная поддержка</span>
                 </li>
               </ul>
-              <Button className="w-full">Попробовать 14 дней</Button>
+              <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">Попробовать 14 дней</Button>
             </Card>
             <Card className="p-8">
               <div className="mb-6">
@@ -584,7 +594,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gradient-to-br from-primary to-primary/90 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 text-white">
         <div className="container mx-auto max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -592,21 +602,27 @@ export default function Index() {
               <p className="text-lg opacity-90 mb-6">Оставьте заявку, и наш специалист свяжется с вами для презентации Doc&Board и обсуждения вашего проекта</p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Icon name="Check" size={20} className="flex-shrink-0 mt-1" />
+                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Icon name="Check" size={16} />
+                  </div>
                   <div>
                     <div className="font-semibold mb-1">Персональная демонстрация</div>
                     <div className="text-sm opacity-80">Покажем возможности под ваши задачи</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Icon name="Check" size={20} className="flex-shrink-0 mt-1" />
+                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Icon name="Check" size={16} />
+                  </div>
                   <div>
                     <div className="font-semibold mb-1">Консультация по внедрению</div>
                     <div className="text-sm opacity-80">Поможем с миграцией и настройкой</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Icon name="Check" size={20} className="flex-shrink-0 mt-1" />
+                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Icon name="Check" size={16} />
+                  </div>
                   <div>
                     <div className="font-semibold mb-1">Тестовый период</div>
                     <div className="text-sm opacity-80">Попробуйте на реальных проектах</div>
@@ -619,16 +635,16 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-secondary/30">
+      <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">Начните работу с Doc&Board</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Единое пространство для документов и досок вашей команды</p>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Единое пространство для документов и досок вашей команды</p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="text-lg px-8">
+            <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
               <Icon name="Rocket" size={20} className="mr-2" />
               Попробовать бесплатно
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8">
+            <Button size="lg" variant="outline" className="text-lg px-8 border-purple-200 text-purple-700 hover:bg-purple-50">
               <Icon name="MessageCircle" size={20} className="mr-2" />
               Связаться с продажами
             </Button>
