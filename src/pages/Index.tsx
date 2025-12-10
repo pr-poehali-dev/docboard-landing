@@ -127,7 +127,7 @@ export default function Index() {
             Как Notion + Miro, но российский и безопасный.<br />
             Визуальные доски, таблицы, шаблоны и теги — в облаке или on-premise
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-4 justify-center flex-wrap mb-16">
             <Button size="lg" className="text-lg px-8">
               <Icon name="Rocket" size={20} className="mr-2" />
               Попробовать бесплатно
@@ -137,7 +137,35 @@ export default function Index() {
               Запросить демо
             </Button>
           </div>
-          <div className="mt-12 bg-secondary/50 rounded-lg p-8 border">
+
+          <div className="mt-12 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-t-xl p-3 border border-gray-700">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div className="flex-1 bg-gray-700/50 rounded px-3 py-1 text-xs text-gray-300 font-mono">
+                  Doc&Board — Главная
+                </div>
+              </div>
+              <div className="bg-black rounded-lg overflow-hidden shadow-2xl border border-gray-700">
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-full"
+                >
+                  <source src="https://msafi.ru/hse/preview.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <div className="bg-gradient-to-b from-gray-900 to-gray-800 h-4 rounded-b-xl border-x border-b border-gray-700"></div>
+          </div>
+
+          <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-lg p-8 border shadow-lg">
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">15,000+</div>
