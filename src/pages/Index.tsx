@@ -98,7 +98,7 @@ function EnterpriseForm() {
 export default function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <nav className="border-b">
+      <nav className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
@@ -115,8 +115,11 @@ export default function Index() {
         </div>
       </nav>
 
-      <section className="py-24 px-6">
-        <div className="container mx-auto max-w-6xl text-center animate-fade-in">
+      <section className="relative py-24 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-purple-50/50 to-blue-50/30"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.15),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
+        <div className="container mx-auto max-w-6xl text-center animate-fade-in relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Документы и доски<br />в одном месте
           </h1>
