@@ -1,6 +1,99 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
+import { useState } from "react";
+
+function EnterpriseForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 3000);
+  };
+
+  return (
+    <Card className="p-8 bg-white">
+      {submitted ? (
+        <div className="text-center py-8">
+          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Icon name="Check" size={32} className="text-green-600" />
+          </div>
+          <h3 className="text-xl font-semibold mb-2">Заявка отправлена!</h3>
+          <p className="text-muted-foreground">Мы свяжемся с вами в ближайшее время</p>
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <Label htmlFor="name">Имя *</Label>
+            <Input 
+              id="name" 
+              required 
+              value={formData.name}
+              onChange={(e) => setFormData({...formData, name: e.target.value})}
+              placeholder="Иван Иванов"
+            />
+          </div>
+          <div>
+            <Label htmlFor="company">Компания *</Label>
+            <Input 
+              id="company" 
+              required 
+              value={formData.company}
+              onChange={(e) => setFormData({...formData, company: e.target.value})}
+              placeholder="ООО «Ромашка»"
+            />
+          </div>
+          <div>
+            <Label htmlFor="email">Email *</Label>
+            <Input 
+              id="email" 
+              type="email" 
+              required 
+              value={formData.email}
+              onChange={(e) => setFormData({...formData, email: e.target.value})}
+              placeholder="i.ivanov@company.ru"
+            />
+          </div>
+          <div>
+            <Label htmlFor="phone">Телефон</Label>
+            <Input 
+              id="phone" 
+              type="tel" 
+              value={formData.phone}
+              onChange={(e) => setFormData({...formData, phone: e.target.value})}
+              placeholder="+7 (999) 123-45-67"
+            />
+          </div>
+          <div>
+            <Label htmlFor="message">Сообщение</Label>
+            <Textarea 
+              id="message" 
+              value={formData.message}
+              onChange={(e) => setFormData({...formData, message: e.target.value})}
+              placeholder="Расскажите о вашем проекте..."
+              rows={3}
+            />
+          </div>
+          <Button type="submit" className="w-full" size="lg">
+            <Icon name="Send" size={20} className="mr-2" />
+            Отправить заявку
+          </Button>
+        </form>
+      )}
+    </Card>
+  );
+}
 
 export default function Index() {
   return (
@@ -406,16 +499,105 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-primary text-white">
+      <section className="py-20 px-6 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold text-center mb-4">Отзывы клиентов</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Компании доверяют Doc&Board для работы с документами и знаниями</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Icon name="Building2" size={24} className="text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold">Ростелеком</div>
+                  <div className="text-sm text-muted-foreground">Команда разработки</div>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">"Перешли с Confluence на Doc&Board. Возможность совмещать документы и визуальные схемы в одном месте сэкономила нам недели работы"</p>
+              <div className="flex items-center gap-1">
+                {[1,2,3,4,5].map(i => <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />)}
+              </div>
+            </Card>
+            <Card className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Icon name="Briefcase" size={24} className="text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold">Сбер</div>
+                  <div className="text-sm text-muted-foreground">Проектный офис</div>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">"Важно было иметь on-premise решение с хранением в РФ. Doc&Board полностью закрыл наши требования по ИБ и импортозамещению"</p>
+              <div className="flex items-center gap-1">
+                {[1,2,3,4,5].map(i => <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />)}
+              </div>
+            </Card>
+            <Card className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Icon name="Sparkles" size={24} className="text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold">Студия Артемия Лебедева</div>
+                  <div className="text-sm text-muted-foreground">Дизайн-команда</div>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">"Простой и функциональный инструмент. Теперь вся база знаний проектов в одном месте, а новички быстро входят в контекст"</p>
+              <div className="flex items-center gap-1">
+                {[1,2,3,4,5].map(i => <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />)}
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-gradient-to-br from-primary to-primary/90 text-white">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold mb-4">Запросите демо для вашей компании</h2>
+              <p className="text-lg opacity-90 mb-6">Оставьте заявку, и наш специалист свяжется с вами для презентации Doc&Board и обсуждения вашего проекта</p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Icon name="Check" size={20} className="flex-shrink-0 mt-1" />
+                  <div>
+                    <div className="font-semibold mb-1">Персональная демонстрация</div>
+                    <div className="text-sm opacity-80">Покажем возможности под ваши задачи</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Check" size={20} className="flex-shrink-0 mt-1" />
+                  <div>
+                    <div className="font-semibold mb-1">Консультация по внедрению</div>
+                    <div className="text-sm opacity-80">Поможем с миграцией и настройкой</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Check" size={20} className="flex-shrink-0 mt-1" />
+                  <div>
+                    <div className="font-semibold mb-1">Тестовый период</div>
+                    <div className="text-sm opacity-80">Попробуйте на реальных проектах</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <EnterpriseForm />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-secondary/30">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">Начните работу с Doc&Board</h2>
-          <p className="text-xl mb-8 opacity-90">Единое пространство для документов и досок вашей команды</p>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Единое пространство для документов и досок вашей команды</p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" variant="secondary" className="text-lg px-8">
+            <Button size="lg" className="text-lg px-8">
               <Icon name="Rocket" size={20} className="mr-2" />
               Попробовать бесплатно
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent border-white text-white hover:bg-white hover:text-primary">
+            <Button size="lg" variant="outline" className="text-lg px-8">
               <Icon name="MessageCircle" size={20} className="mr-2" />
               Связаться с продажами
             </Button>
