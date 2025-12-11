@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
+import FAQSection from "@/components/FAQSection";
 import { useState } from "react";
 
 function EnterpriseForm() {
@@ -605,6 +606,14 @@ export default function Index() {
               </div>
             </Card>
           </div>
+        </div>
+      </section>
+
+      <section id="faq" className="py-20 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-4">Вопросы и ответы</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Ответы на частые вопросы о Doc&Board</p>
+          <FAQSection />
         </div>
       </section>
 
