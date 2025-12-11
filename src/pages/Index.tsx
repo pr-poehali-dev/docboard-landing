@@ -540,6 +540,70 @@ export default function Index() {
         </div>
       </section>
 
+      <section className="py-20 px-6 bg-gradient-to-br from-purple-50 via-pink-50/30 to-white">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Icon name="Gift" size={16} />
+              <span>Попробуйте бесплатно</span>
+            </div>
+            <h2 className="text-4xl font-bold mb-6">Бесплатная демо-версия на 14 дней</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Оцените всю мощь платформы без рисков и ограничений
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="flex items-start gap-4 bg-white p-6 rounded-lg border border-purple-100">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                <Icon name="Zap" size={24} className="text-white" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Без риска попробовать всё</h3>
+                <p className="text-sm text-gray-600">Полный доступ ко всем функциям платформы в реальных условиях</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4 bg-white p-6 rounded-lg border border-purple-100">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                <Icon name="Users" size={24} className="text-white" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Идеально для новичков</h3>
+                <p className="text-sm text-gray-600">Для студентов, фрилансеров и небольших команд</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4 bg-white p-6 rounded-lg border border-purple-100">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                <Icon name="Clock" size={24} className="text-white" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Плавный старт</h3>
+                <p className="text-sm text-gray-600">Достаточно времени для настройки и принятия решения</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4 bg-white p-6 rounded-lg border border-purple-100">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                <Icon name="CreditCard" size={24} className="text-white" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Нет привязки к карте</h3>
+                <p className="text-sm text-gray-600">Простая регистрация — и сразу в работу</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-10">
+            <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+              <Icon name="Rocket" size={20} className="mr-2" />
+              Начать пробный период
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-6 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center mb-4">Отзывы клиентов</h2>
