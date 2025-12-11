@@ -106,11 +106,17 @@ export default function Index() {
             </div>
             <span className="font-semibold text-xl">Doc&Board</span>
           </div>
-          <div className="flex items-center gap-4">
-            <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Возможности</a>
-            <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Тарифы</a>
-            <Button variant="outline" size="sm">Войти</Button>
-            <Button size="sm">Попробовать бесплатно</Button>
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-6">
+              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Возможности</a>
+              <a href="#ai-assistant" className="text-muted-foreground hover:text-foreground transition-colors">AI-ассистент</a>
+              <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Тарифы</a>
+              <a href="#reviews" className="text-muted-foreground hover:text-foreground transition-colors">Отзывы</a>
+            </div>
+            <div className="flex items-center gap-4">
+              <Button variant="outline" size="sm">Войти</Button>
+              <Button size="sm">Попробовать бесплатно</Button>
+            </div>
           </div>
         </div>
       </nav>
@@ -267,62 +273,6 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-secondary/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Сравнение с альтернативами</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-lg overflow-hidden border">
-              <thead className="bg-muted">
-                <tr>
-                  <th className="px-6 py-4 text-left font-semibold">Возможность</th>
-                  <th className="px-6 py-4 text-center font-semibold">Notion</th>
-                  <th className="px-6 py-4 text-center font-semibold">Miro</th>
-                  <th className="px-6 py-4 text-center font-semibold">Confluence</th>
-                  <th className="px-6 py-4 text-center font-semibold bg-primary/10">Doc&Board</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t">
-                  <td className="px-6 py-4">Документы + доски в одном месте</td>
-                  <td className="px-6 py-4 text-center"><Icon name="X" size={20} className="text-muted-foreground mx-auto" /></td>
-                  <td className="px-6 py-4 text-center"><Icon name="X" size={20} className="text-muted-foreground mx-auto" /></td>
-                  <td className="px-6 py-4 text-center"><Icon name="X" size={20} className="text-muted-foreground mx-auto" /></td>
-                  <td className="px-6 py-4 text-center bg-primary/5"><Icon name="Check" size={20} className="text-primary mx-auto" /></td>
-                </tr>
-                <tr className="border-t">
-                  <td className="px-6 py-4">On-premise установка</td>
-                  <td className="px-6 py-4 text-center"><Icon name="X" size={20} className="text-muted-foreground mx-auto" /></td>
-                  <td className="px-6 py-4 text-center"><Icon name="X" size={20} className="text-muted-foreground mx-auto" /></td>
-                  <td className="px-6 py-4 text-center"><Icon name="Check" size={20} className="text-green-600 mx-auto" /></td>
-                  <td className="px-6 py-4 text-center bg-primary/5"><Icon name="Check" size={20} className="text-primary mx-auto" /></td>
-                </tr>
-                <tr className="border-t">
-                  <td className="px-6 py-4">Хранение данных в РФ</td>
-                  <td className="px-6 py-4 text-center"><Icon name="X" size={20} className="text-muted-foreground mx-auto" /></td>
-                  <td className="px-6 py-4 text-center"><Icon name="X" size={20} className="text-muted-foreground mx-auto" /></td>
-                  <td className="px-6 py-4 text-center"><Icon name="Minus" size={20} className="text-yellow-600 mx-auto" /></td>
-                  <td className="px-6 py-4 text-center bg-primary/5"><Icon name="Check" size={20} className="text-primary mx-auto" /></td>
-                </tr>
-                <tr className="border-t">
-                  <td className="px-6 py-4">Санкционные риски</td>
-                  <td className="px-6 py-4 text-center text-sm text-muted-foreground">Высокие</td>
-                  <td className="px-6 py-4 text-center text-sm text-muted-foreground">Высокие</td>
-                  <td className="px-6 py-4 text-center text-sm text-muted-foreground">Средние</td>
-                  <td className="px-6 py-4 text-center bg-primary/5 text-sm font-semibold text-primary">Нет</td>
-                </tr>
-                <tr className="border-t">
-                  <td className="px-6 py-4">Адаптация под корпорации</td>
-                  <td className="px-6 py-4 text-center"><Icon name="Minus" size={20} className="text-yellow-600 mx-auto" /></td>
-                  <td className="px-6 py-4 text-center"><Icon name="X" size={20} className="text-muted-foreground mx-auto" /></td>
-                  <td className="px-6 py-4 text-center"><Icon name="Check" size={20} className="text-green-600 mx-auto" /></td>
-                  <td className="px-6 py-4 text-center bg-primary/5"><Icon name="Check" size={20} className="text-primary mx-auto" /></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 px-6" id="features">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center mb-4">Для кого подходит</h2>
@@ -330,22 +280,22 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="p-8 hover-scale">
               <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Icon name="Building2" size={32} className="text-primary" />
+                <Icon name="Sparkles" size={32} className="text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Корпорации и госсектор</h3>
-              <p className="text-muted-foreground mb-4">Компании от 100+ сотрудников с высокими требованиями к безопасности</p>
+              <h3 className="text-xl font-semibold mb-3">Небольшие команды</h3>
+              <p className="text-muted-foreground mb-4">Стартапы, агентства, студии 2–10 человек</p>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
                   <Icon name="Check" size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                  <span>On-premise установка</span>
+                  <span>Быстрый старт без настройки</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Icon name="Check" size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                  <span>Интеграция SSO / Keycloak</span>
+                  <span>Оплата в рублях</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Icon name="Check" size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                  <span>152-ФЗ и импортозамещение</span>
+                  <span>Доступная цена</span>
                 </div>
               </div>
             </Card>
@@ -372,22 +322,22 @@ export default function Index() {
             </Card>
             <Card className="p-8 hover-scale">
               <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Icon name="Sparkles" size={32} className="text-primary" />
+                <Icon name="Building2" size={32} className="text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Небольшие команды</h3>
-              <p className="text-muted-foreground mb-4">Стартапы, агентства, студии 2–10 человек</p>
+              <h3 className="text-xl font-semibold mb-3">Корпорации и госсектор</h3>
+              <p className="text-muted-foreground mb-4">Компании от 100+ сотрудников с высокими требованиями к безопасности</p>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
                   <Icon name="Check" size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                  <span>Быстрый старт без настройки</span>
+                  <span>On-premise установка</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Icon name="Check" size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                  <span>Оплата в рублях</span>
+                  <span>Интеграция SSO / Keycloak</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Icon name="Check" size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                  <span>Доступная цена</span>
+                  <span>152-ФЗ и импортозамещение</span>
                 </div>
               </div>
             </Card>
@@ -395,7 +345,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gradient-to-br from-purple-50 via-pink-50/30 to-white">
+      <section id="ai-assistant" className="py-20 px-6 bg-gradient-to-br from-purple-50 via-pink-50/30 to-white">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Icon name="Sparkles" size={16} />
@@ -604,7 +554,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-secondary/30">
+      <section id="reviews" className="py-20 px-6 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center mb-4">Отзывы клиентов</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Компании доверяют Doc&Board для работы с документами и знаниями</p>
